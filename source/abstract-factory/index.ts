@@ -1,6 +1,6 @@
 import {KindType,Battle} from './interface';
 
-export function droidProducer(kind:KindType) {
+export function droidProducer(kind:KindType): () => Battle {
     if (kind === 'battle'){
         return battleDroidFactory;
     }
