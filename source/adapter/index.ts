@@ -1,21 +1,21 @@
-import {ISoldier, IJedi, IJediAdapter} from "./interface";
+import {IJedi, IJediAdapter, ISoldier} from "./interface";
 
 class Soldier implements ISoldier {
 
     constructor(public level: number) {
     }
 
-    attack() {
+    public attack() {
         return this.level * 1;
     }
 }
 
- class Jedi implements IJedi {
+class Jedi implements IJedi {
 
     constructor(public level: number) {
     }
 
-    attackWithSaber() {
+    public attackWithSaber() {
         return this.level * 100;
     }
 }
@@ -23,9 +23,10 @@ class Soldier implements ISoldier {
 class JediAdapter implements IJediAdapter {
 
     constructor(public jedi: IJedi) {
+  
     }
 
-    attack() {
+    public attack() {
         return this.jedi.attackWithSaber();
     }
 }
@@ -33,5 +34,5 @@ class JediAdapter implements IJediAdapter {
 export {
     Soldier,
     Jedi,
-    JediAdapter
+    JediAdapter,
 };

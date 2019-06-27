@@ -1,9 +1,10 @@
-import {Instance} from './interface';
+import {Instance} from "./interface";
 
 export class Person {
-    static instance: Instance;
+    public static instance: Instance;
     constructor() {
-        if (typeof Person.instance === 'object') {
+        // TODO: improve condition - do we have it or not
+        if (Person.instance) {
             return Person.instance;
         }
         Person.instance = this;

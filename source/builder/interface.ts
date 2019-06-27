@@ -5,8 +5,8 @@ export interface  IBuild {
 }
 
 export interface IRequesBuilder {
-    forUrl:(url: string)=>object;
-    useMethod:(method: string)=>object;
-    payload:(payload: object)=>object;
+    forUrl: (url: string) => object;
+    useMethod: (method: string) => object;
+    payload: (payload: object) => object;
     build(): IBuild;
 }

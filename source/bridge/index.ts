@@ -1,4 +1,4 @@
-import { IPrinter,InkType, InkInt } from "./interface";
+import {InkInt, InkType, IPrinter} from "./interface";
 
 class Printer implements IPrinter {
     constructor(public ink: InkInt) { }
@@ -9,7 +9,7 @@ class EpsonPrinter extends Printer {
         super(ink);
     }
 
-    print() {
+    public print() {
         return "Printer: Epson, Ink: " + this.ink.get();
     }
 }
@@ -19,15 +19,17 @@ class HPprinter extends Printer {
         super(ink);
     }
 
-    print() {
+    public print() {
         return "Printer: HP, Ink: " + this.ink.get();
     }
 }
 
 class Ink implements InkInt {
-    constructor(public type: InkType) { }
+    constructor(public type: InkType) {
 
-    get() {
+     }
+
+    public get() {
         return this.type;
     }
 }
@@ -48,5 +50,5 @@ export {
     EpsonPrinter,
     HPprinter,
     AcrylicInk,
-    AlcoholInk
+    AlcoholInk,
 };

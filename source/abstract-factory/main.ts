@@ -1,2 +1,3 @@
-import {droidProducer} from './index';
-console.log(droidProducer('battle'));
+import {droidProducer} from "./index";
+
+console.log(droidProducer("battle"));

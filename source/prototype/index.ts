@@ -1,11 +1,11 @@
-import {ISheep} from './interface';
+import {IPrototype, ISheep} from "./interface";
 
-export class Sheep implements ISheep {
+export class Sheep implements ISheep, IPrototype {
 
-    constructor(public name:string, public weight:number) {
+    constructor(public name: string, public weight: number) {
     }
 
-    clone(): Sheep {
+    public clone(): Sheep {
         return new Sheep(this.name, this.weight);
     }
 }

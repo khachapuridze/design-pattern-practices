@@ -1,1 +1,1 @@
-import {Person} from "./index"
+import {Person} from "./index";

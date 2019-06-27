@@ -1,1 +1,1 @@
-import {Soldier,Jedi,JediAdapter} from "./index"
+import {Soldier, Jedi, JediAdapter} from "./index";
