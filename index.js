@@ -1,1 +1,1 @@
-require('./build/abstract-factory/main');
+require('./build/adapter/main');
