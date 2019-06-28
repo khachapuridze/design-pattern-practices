@@ -1,7 +1,7 @@
-//Equipment
+import {IEquipment} from "./interface";
 class Equipment {
     price: number;
-    name: any;
+    name: string;
 
     getPrice() {
         return this.price || 0;
@@ -18,7 +18,7 @@ class Equipment {
 
 // --- composite ---
 class Composite extends Equipment {
-    equipments: any[];
+    equipments: IEquipment[];
 
     constructor() {
         super();

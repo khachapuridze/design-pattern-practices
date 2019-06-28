@@ -1,0 +1,1 @@
+import ShopFacade from "./index";

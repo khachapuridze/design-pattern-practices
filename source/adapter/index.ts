@@ -20,10 +20,10 @@ class Jedi implements IJedi {
     }
 }
 
-class JediAdapter implements IJediAdapter {
+class JediAdapter extends Jedi implements IJediAdapter {
 
     constructor(public jedi: IJedi) {
-  
+        super(jedi.level);  
     }
 
     public attack() {

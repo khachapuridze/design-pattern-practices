@@ -27,7 +27,7 @@ export class RequestBuilder  implements IRequesBuilder {
         return this;
     }
 
-    public payload(payload: {}) {
+    public payload(payload: object) {
         this.request.payload = payload;
         return this;
     }
